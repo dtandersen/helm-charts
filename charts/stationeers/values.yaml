@@ -84,3 +84,5 @@ affinity: {}
 volumeMounts: []
 
 volumes: []
+
+hostNetwork: false

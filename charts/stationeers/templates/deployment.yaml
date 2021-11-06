@@ -20,7 +20,7 @@ spec:
       labels:
         {{- include "stationeers.selectorLabels" . | nindent 8 }}
     spec:
-      hostNetwork: true
+      hostNetwork: {{ .Values.hostNetwork }}
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
