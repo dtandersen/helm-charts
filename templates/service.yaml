@@ -7,9 +7,21 @@ metadata:
 spec:
   type: {{ .Values.service.type }}
   ports:
-    - port: {{ .Values.service.port }}
+#    - port: {{ .Values.service.port }}
+#      targetPort: http
+#      protocol: TCP
+#      name: http
+    - port: 27500
+      targetPort: gameport
+      protocol: UDP
+      name: gameport
+    - port: 27500
       targetPort: http
       protocol: TCP
       name: http
+    - port: 27015
+      targetPort: updateport
+      protocol: UDP
+      name: updateport
   selector:
     {{- include "stationeers.selectorLabels" . | nindent 4 }}

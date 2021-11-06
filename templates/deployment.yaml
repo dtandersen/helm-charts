@@ -34,9 +34,15 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
+            - name: gameport
+              containerPort: 27500
+              protocol: UDP
             - name: http
-              containerPort: 80
+              containerPort: 27500
               protocol: TCP
+            - name: updateport
+              containerPort: 27015
+              protocol: UDP
           livenessProbe:
             httpGet:
               path: /
