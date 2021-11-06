@@ -24,14 +24,6 @@ jobs:
         with:
           version: v3.4.0
 
-#      - name: Copy the chart
-#        run: |
-#          mkdir -p charts/stationeers
-#          cp -rp templates charts/stationeers
-#          cp -p *.yaml charts/stationeers
-#          cp -p .helmignore charts/stationeers
-#          ls -alR charts
-
       - name: Run schart-releaser
         uses: helm/chart-releaser-action@v1.2.1
         with:
