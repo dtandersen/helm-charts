@@ -26,10 +26,10 @@ jobs:
 
       - name: Copy the chart
         run: |
-          pwd
-          ls -alR
           mkdir -p charts/stationeers
-          cp -rp * charts/stationeers
+          cp -rp templates charts/stationeers
+          cp -p *.yaml charts/stationeers
+          cp -p .helmignore charts/stationeers
 
       - name: Run chart-releaser
         uses: helm/chart-releaser-action@v1.2.1
