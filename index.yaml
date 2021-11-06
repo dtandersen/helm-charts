@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  stationeers:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2021-11-06T21:11:12.746376814Z"
+    description: A Helm chart for Kubernetes
+    digest: 1613d19fb9e7b4634f4226886983d15e113ddd9b892fde90bdc55c65e1870715
+    name: stationeers
+    type: application
+    urls:
+    - https://github.com/dtandersen/stationeers-chart/releases/download/stationeers-0.1.0/stationeers-0.1.0.tgz
+    version: 0.1.0
+generated: "2021-11-06T21:11:12.746406715Z"
