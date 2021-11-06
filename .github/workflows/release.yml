@@ -27,6 +27,7 @@ jobs:
       - name: Copy the chart
         run: |
           pwd
+          ls -alR
           mkdir -p charts/stationeers
           cp -rp * charts/stationeers
 
