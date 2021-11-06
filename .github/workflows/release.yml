@@ -32,7 +32,7 @@ jobs:
           cp -p .helmignore charts/stationeers
           ls -alR charts
 
-      - name: Run chart-releaser
+      - name: Run schart-releaser 
         uses: helm/chart-releaser-action@v1.2.1
         with:
           charts_dir: charts
